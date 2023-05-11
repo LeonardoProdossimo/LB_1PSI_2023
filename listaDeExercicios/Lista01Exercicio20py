@@ -1,0 +1,18 @@
+#Pedrinho tem um cofrinho com muitas moedas, e deseja saber quantos reais conseguiu poupar. Faça um programa para ler a quantidade de cada tipo de moeda, e imprimir o valor total economizado, em reais. Considere que existam moedas de 1, 5, 10, 25 e 50 centavos, e ainda moedas de 1 real. Não havendo moeda de um tipo, a quantidade respectiva é zero.
+
+moeda1 = int(input('Digite a quantidade de moedas de 1 centavo: '))
+moeda2 = int(input('Digite a quantidade de moedas de 5 centavos: '))
+moeda3 = int(input('Digite a quantidade de moedas de 10 centavos: '))
+moeda4 = int(input('Digite a quantidade de moedas de 25 centavos: '))
+moeda5 = int(input('Digite a quantidade de moedas de 50 centavos: '))
+moeda6 = int(input('Digite a quantidade de moedas de 1 real: '))
+
+m1 = moeda1 * 0.01
+m2 = moeda1 * 0.05
+m3 = moeda1 * 0.10
+m4 = moeda1 * 0.25
+m5 = moeda1 * 0.50
+
+total = (m1+m2+m3+m4+m5+moeda6)
+
+print(f'O valor total econômizado é de R$ {total:.2f}')
