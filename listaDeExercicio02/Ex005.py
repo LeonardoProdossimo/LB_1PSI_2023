@@ -10,6 +10,6 @@ for i in range(n):
     nota = float(input("Digite a nota: "))
     nota = nota + media
     media = nota
-print(f'Sua média é {nota/n}')
+print(f'Sua média é {media/n}')
     
 
