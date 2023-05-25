@@ -11,15 +11,15 @@
 
 # O algoritmo deve escrever o suas notnúmero do aluno, as, a média dos exercícios, a média de aproveitamento, o conceito correspondente e a mensagem: APROVADO se o conceito for A, B ou C e REPROVADO se o conceito for D ou E. Pergunte se o usuário deseja digitar as notas de outro aluno S para sim e N para não
 print('-'*40)
-p = input('Deseja cadastrar um aluno? \n')
+p = input('Deseja cadastrar um aluno? Digite S pra Sim e N para não: \n')
 
-while p.upper()!="SIM" and p.upper()!="NÃO" and p.upper()!="NAO":
+while p.upper()!="S" and p.upper()!="N":
     print('-'*40)
     print('Resposta inválida, digite novamente!')
-    p = input('Deseja cadastrar um aluno? \n')
+    p = input('Deseja cadastrar um aluno? Digite S pra Sim e N para não:  \n')
 
 
-while p.upper()!="NÃO" or p.upper()!="NAO":
+while p.upper()!="N":
     print('-'*40)
     id = int(input('Digite o número de identificação: '))
 
@@ -27,9 +27,9 @@ while p.upper()!="NÃO" or p.upper()!="NAO":
         print('-'*40)
         print('Número inválido, digite novamente!')
         id = int(input("Digite o número de identificação: "))
+    
     print('-'*40)
     nota1 = float(input('Digite a primeira nota: '))
-
     while nota1 < 0:
         print('-'*40)
         print('Nota inválida, digite novamente!')
@@ -56,36 +56,41 @@ while p.upper()!="NÃO" or p.upper()!="NAO":
         print('Nota inválida, digite novamente!')
         me = float(input("Digite a nota dos exercícios: "))
 
-
     ma = (nota1 + nota2*2 + nota3*3 + me)/7
+    
     if(ma >= 9,0):
         print('-'*40)
         print(f'Suas notas são: \n Nota1-> {nota1} \n Nota2-> {nota2} \n Nota3-> {nota3} \n Nota dos exercícios-> {me}')
+        print('-'*40)
         print(f'O aluno de identificação {id},obteve a média {ma:.2f} e está aprovado com conceito A!')
 
     if(ma>=7.5 and ma < 9.0):
         print('-'*40)
         print(f'Suas notas são: \n Nota1-> {nota1} \n Nota2-> {nota2} \n Nota3-> {nota3} \n Nota dos exercícios-> {me}')
+        print('-'*40)
         print(f'O aluno de identificação {id}, obteve a média {ma:.2f} e está aprovado com conceito B!')
 
     if(ma>=6 and ma < 7.5):
         print('-'*40)
         print(f'Suas notas são: \n Nota1-> {nota1} \n Nota2-> {nota2} \n Nota3-> {nota3} \n Nota dos exercícios-> {me}')
+        print('-'*40)
         print(f'O aluno de identificação {id}, obteve a média {ma:.2f} e está aprovado com conceito C!')
 
     if(ma>=4 and ma < 6):
         print('-'*40)
         print(f'Suas notas são: \n Nota1-> {nota1} \n Nota2-> {nota2} \n Nota3-> {nota3} \n Nota dos exercícios-> {me}')
+        print('-'*40)
         print(f'O aluno de identificação {id}, obteve a média {ma:.2f} e está reprovado com conceito D!')
 
     if(ma<4):
         print('-'*40)
         print(f'Suas notas são: \n Nota1-> {nota1} \n Nota2-> {nota2} \n Nota3-> {nota3} \n Nota dos exercícios-> {me}')
+        print('-'*40)
         print(f'O aluno de identificação {id}, obteve a média {ma:.2f} e está reprovado com conceito E!')
     
-    p = input('Deseja cadastrar outro aluno? \n')
+    p = input('Deseja cadastrar outro aluno? Digite S pra Sim e N para não:\n')
 
-    while p.upper()!="SIM" and p.upper()!="NÃO" and p.upper()!="NAO":
+    while p.upper()!="S" and p.upper()!="N":
         print('-'*40)
         print('Resposta inválida, digite novamente!')
-        p = input('Deseja cadastrar outro aluno? \n')
+        p = input('Deseja cadastrar outro aluno? Digite S pra sim e N para não: \n')

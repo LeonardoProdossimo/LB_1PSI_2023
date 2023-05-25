@@ -4,7 +4,7 @@ import random
 
 id = random.randint(0, 100)
 
-for i in range(76):
+for i in range(75):
     id = random.randint(0, 100)
     if(id<18):
         print(f"Sua idade é {id} e você não está na maioridade!")
@@ -13,3 +13,4 @@ for i in range(76):
         print(f'Sua idade é {id} e você está na maioridade!')
         print('-'*40)
     i=i+1
+print(f'O programa leu um total de {i} idades diferentes!')

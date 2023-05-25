@@ -4,11 +4,12 @@ import random
 
 n = random.randint(0,1000)
 q = 0
-for i in range(81):
+for i in range(80):
     if(n >= 10 and n <= 150):
         q = q + 1
     n = random.randint(0,1000)
     i=i+1
     print('-'*40)
     print(f'Número {n}')
+print('-'*40)
 print(f'O programa leu um total de {i} números e {q} estão dentro de 10(inclusive) e 150(inclusive)')
