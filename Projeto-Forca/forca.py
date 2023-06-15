@@ -21,6 +21,7 @@ def jogar(escolhida):
     if escolhida == "":
         aleatoria = random.choice(palavras).upper()
         escolhida = aleatoria
+        print(escolhida)
 
     for i in range(0, len(escolhida)):
         if escolhida[i] == ' ' and i != len(escolhida):
@@ -52,12 +53,12 @@ def jogar(escolhida):
 
         if acertou:
             tentativas = tentativas + 1
-            print('Tentativas: {}\n'.format(tentativas))
+            
         else:
             tentativas = tentativas + 1
             erros = erros + 1
-            print('Tentativas: {}\n'.format(erros))
-        
+        print('Tentativas: {}\n'.format(tentativas)) 
+        print('Erros: {}\n'.format(erros))
 
         print ('Você pode tentar acertar a palavra, mas isso acabará com suas vidas, deseja tenta?')
         print('1 - Responder\n2 - Tentar mais uma letra')
@@ -67,6 +68,7 @@ def jogar(escolhida):
             print ('Você pode tentar acertar a palavra, mas isso acabará com suas vidas, deseja tenta?')
             print('1 - Responder\n2 - Tentar mais uma letra')
             op = int(input('Opção: '))
+            os.system('clear')
 
         if op == 1:
             chute = str(input('Sua resposta: '))
@@ -82,11 +84,11 @@ def jogar(escolhida):
         else:
             acertou = False
             letra = input('\nInforme uma letra: ')
-        os.system('clear')
+
 print("\nJogo Da Forca")
 
 op = -1
-aleatoria = ""
+escolhida = ""
 
 while op != 0:
     print("\n1 - Jogar"
@@ -97,7 +99,7 @@ while op != 0:
         print('Opção inválida, digite outra vez! \n')
         op = int(input('Opção: '))
     if op == 1:
-        jogar(aleatoria.strip())
+        jogar(escolhida.strip())
 
     else:
         print('Obrigado por jogar! Volte sempre <3')
