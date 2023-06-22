@@ -32,7 +32,7 @@ def jogar(escolhida):
             acertou = '_' not in capturada
         else:
             erros += 1
-        print('Tentativas: {}'.format(tentativas) + '\nErros: {}'.format(erros)) 
+        print('\nTentativas: {}'.format(tentativas) + '\nErros: {}'.format(erros)) 
         print('Palavra: {}'.format(' '.join(capturada)))
         print('Letras usadas: {}'.format(letrasUsadas))
         tentativas = tentativas + 1
