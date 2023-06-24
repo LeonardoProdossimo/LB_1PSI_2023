@@ -39,7 +39,6 @@ while rep:
             print('-' * 40)
 
     print("\nBem-vindo ao jogo do adivinho! Digite a opção para prosseguir!")
-
     print("\n1 - Jogar"
         "\n0 - Sair")
 
